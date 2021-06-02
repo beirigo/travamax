@@ -1,0 +1,43 @@
+{
+  "name": "Travamax",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Remove todas as bundas do futemax.gratis",
+  "homepage_url": "https://futemax.gratis",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "https://futemax.gratis/*",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://futemax.gratis/*"
+      ],
+      "all_frames": true,
+      "css": [
+        "src/inject/inject.css",
+        "src/frame.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://futemax.gratis/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
