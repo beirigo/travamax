@@ -1,9 +1,9 @@
 {
   "name": "Travamax",
-  "version": "0.0.1",
-  "manifest_version": 2,
-  "description": "Remove todas as bundas do futemax.gratis",
-  "homepage_url": "https://futemax.gratis",
+  "version": "0.0.2",
+  "manifest_version": 3,
+  "description": "Remove todas as bundas do futemax.la",
+  "homepage_url": "https://futemax.la",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -11,29 +11,25 @@
   },
   "default_locale": "en",
   "background": {
-    "scripts": [
-      "src/bg/background.js"
-    ],
-    "persistent": true
+    "service_worker": "src/bg/background.js"
   },
   "permissions": [
-    "https://futemax.gratis/*",
-    "activeTab"
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://futemax.la/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://futemax.gratis/*"
+        "https://futemax.la/*"
       ],
       "all_frames": true,
       "css": [
         "src/inject/inject.css",
         "src/frame.css"
-      ]
-    },
-    {
-      "matches": [
-        "https://futemax.gratis/*"
       ],
       "js": [
         "src/inject/inject.js"

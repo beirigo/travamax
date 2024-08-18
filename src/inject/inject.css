@@ -2,13 +2,14 @@
  * Place your custom CSS styles here.
  **/
 
-.alertWS, #fb-root, #sub_header, .share-button, .content-post, .description{
+.alertWS,
+#fb-root,
+#sub_header,
+.share-button,
+.content-post,
+.description {
   display: none !important;
   z-index: -999 !important;
-}
-
-.owl-carousel .owl-item img {
-  width: 100px !important;
 }
 
 .header {
@@ -18,9 +19,9 @@
 
 .travatitle {
   text-align: center;
-  color:yellowgreen;
+  color: yellowgreen;
   font-weight: bolder;
-  font-size: 50px;
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: 700;
   font-family: "Comic Sans MS", "Comic Sans";
@@ -29,8 +30,3 @@
 .travahomelink {
   text-decoration: none;
 }
-
-/* #Player iframe {
-  display: none !important;
-  z-index: -999999 !important;
-} */

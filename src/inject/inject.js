@@ -1,9 +1,9 @@
-chrome.extension.sendMessage({}, function (response) {
+chrome.runtime.sendMessage({}, function (response) {
   var readyStateCheckInterval = setInterval(function () {
     if (document.readyState === "complete") {
       clearInterval(readyStateCheckInterval);
 
-      if (window.location.href != "https://futemax.gratis/") {
+      if (window.location.href != "https://futemax.la/") {
         removeRelated();
         removeComments()
         removeTitles();
@@ -41,8 +41,10 @@ function removeTitles() {
 }
 
 function awesomeHeader() {
-  const header = document.querySelector(".header .logo");
-  header.innerHTML = "<a class='travahomelink' href='/'><h1 class='travatitle'>SUPER TRAVAMAX PLUS</h1></a>";
+  console.log("AWESOME HEADER");
+  const header = document.querySelector("header #logo");
+  console.log(header);
+  header.innerHTML = "<a class='travahomelink' href='/'><h1 class='travatitle'>TRAVAMAX</h1></a>";
   header.className = "";
 }
 
